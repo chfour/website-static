@@ -1,7 +1,6 @@
 :root {
     --highlight: #474747;
 }
-
 body {
     font-family: "Fira Sans", Arial, Helvetica, sans-serif;
     color: white;
@@ -19,10 +18,25 @@ textarea:focus, input:focus, button:focus {
     outline: none;
     border: 1px solid white;
 }
-a{ color: #aaa; }
-a:visited{ color: rgb(134, 129, 207); }
+
+a { color: rgb(189, 184, 255); }
+a:visited { color: rgb(134, 129, 207); }
+a[href="../"] {
+    color: rgb(218, 215, 255);
+    text-decoration: none;
+}
 
 table.bordered {
     table-layout: fixed;
     border: 2px solid white;
 }
+
+.links-list {
+    display: grid;
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-content: center;
+    font-size: 2em;
+}
+
+.links-list a { display: block; }
