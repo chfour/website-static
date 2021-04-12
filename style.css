@@ -40,3 +40,4 @@ table.bordered {
 }
 
 .links-list a { display: block; }
+.links-list a::after { content: " →"; }
