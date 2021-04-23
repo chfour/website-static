@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linux system management</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <a href="/resources/" class="backbutton">&larr;</a>
+    <h1>linux/unix system management</h1>
+
+    <h2>user management</h2>
+    <ul>
+        <li>adding users: <code># useradd -m name</code></li>
+        <li>removing users: <code># userdel name</code> (use <code>-r</code> to remove home directory)</li>
+        <li>change password: <code>$ passwd [user]</code></li>
+        <li>sudo as user: <code>$ sudo -i -u user command</code></li>
+        <li>shell as user: <code># su user</code> (optionally add <code>-l</code> for a login prompt)</li>
+    </ul>
+
+    <h2>file management</h2>
+    <ul>
+        <li>copy file: <code>$ cp from to</code></li>
+        <li>move/rename file: <code>$ mv from to</code></li>
+        <li>symlink file: <code>$ ln -s from to</code></li>
+    </ul>
+
+    <h2>file permissions</h2>
+    <ul>
+        <li>set file owner: <code>$ chown user[:group]</code></li>
+        <li>
+            set file permissions: <code>$ chmod ugo file</code><br>
+            <code>u</code> - permissions for owner<br>
+            <code>g</code> - permissions for owner group<br>
+            <code>o</code> - permissions for others<br>
+            (see below)
+        </li>
+        <li>get file permissions: <code>$ stat -c %a file</code></li>
+    </ul>
+
+    <h2>file permission integers</h2>
+    <ul>
+        <li>1: executable (<code>x</code>)</li>
+        <li>2: write (<code>w</code>)</li>
+        <li>4: read (<code>r</code>)</li>
+        <li>add to combine (eg. 7 = RWX, 6 = RW etc.)</li>
+    </ul>
+</body>
+</html>

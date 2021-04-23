@@ -5,10 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:8000",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "custom"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "/home/ch4/Documents/chfour.github.io/index.html",
+            "file": "index.html",
             "runtimeExecutable": "custom" // chromium
         }
     ]

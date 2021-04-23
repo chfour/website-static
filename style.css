@@ -41,3 +41,10 @@ table.bordered {
 
 .links-list a { display: block; }
 .links-list a::after { content: " →"; }
+
+code {
+    background-color: #555555;
+    font-family: "Fira Code", monospace;
+    padding: 0.01em 0.25em;
+    border-radius: 0.2em;
+}
