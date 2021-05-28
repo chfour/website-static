@@ -6,12 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my website</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .aboutme {
+            margin-left: 2%;
+            width: max-content;
+            padding: 1em;
+            background-color: #896ac1;
+            margin-bottom: 2em;
+            border-radius: 0.4em;
+        }
+        .aboutme-main {
+            display: grid;
+            grid-template-columns: repeat(2, max-content);
+            gap: 1em;
+        }
+        .aboutme * { margin: 0; }
+        .aboutme-profile {
+            max-height: 5em;
+            border-radius: 5%;
+        }
+        .aboutme-places {
+            margin-top: 0.5em;
+        }
+        .aboutme-places a {
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    nothing here for now!
-    <p>well, there actually is <em>something</em> here.</p>
+    <div class="aboutme">
+        <div class="aboutme-main">
+            <img class="aboutme-profile" src="images/profilepic.png" alt="profile picture" title="my profile picture is old I swear I'll change it">
+            <div class="aboutme-intro">
+                <h2 style="margin-block-start: 0.2em;">hi! I'm ch4.</h2>
+                <p>I make stuff. Sometimes.</p>
+            </div>
+        </div>
+        <p class="aboutme-places">
+            <a href="https://github.com/chfour">github</a>
+            <a href="https://www.reddit.com/user/m1ch4ll0">reddit</a>
+            <a href="https://www.youtube.com/channel/UCVpfFwVNW1O5aip8AFMojpA">youtube</a>
+        </p>
+    </div>
+    <h1>some of my stuff:</h1>
     <div class="links-list" style="font-size: 1.5em;">
-        <a href="resources/">some useful resources</a>
+        <a href="resources/">useful resources</a>
+        <a href="garlic-bread-time/">garlic bread time&trade;</a>
     </div>
 </body>
 </html>
