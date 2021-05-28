@@ -1,32 +1,58 @@
 :root {
+    --font-main: "Fira Sans", Arial, Helvetica, sans-serif;
+    --font-mono: "Fira Code", monospace;
+
     --color-bg: #1d1d1d;
     --color-primary: white;
     --color-secondary: #474747;
+
     --color-link: rgb(189, 184, 255);
     --color-link-visited: rgb(134, 129, 207);
     --color-link-nav: rgb(218, 215, 255);
+
+    --border--normal: 1px solid var(--color-secondary);
+    --border--focus: 1px solid var(--color-primary);
+
+    --input-bg-normal: #2d2d2d;
+    --input-bg-pressed: #757575;
 }
 
 body {
-    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    font-family: var(--font-main);
     color: var(--color-primary);
     background-color: var(--color-bg);
 }
 
 textarea, input, button {
-    background-color: var(--color-bg);
+    background-color: var(--input-bg-normal);
     color: var(--color-primary);
-    border: 1px solid var(--color-secondary);
+    border: var(--border--normal);
     padding: 0.4em;
 }
-input{ font-family: "Fira Sans", Arial, Helvetica, sans-serif; }
+input{ font-family: var(--font-main); }
 textarea:focus, input:focus, button:focus {
     outline: none;
-    border: 1px solid var(--color-primary);
+    border: var(--border--focus);
+}
+input:active, button:active {
+    background-color: var(--input-bg-pressed);
 }
 
 a { color: var(--color-link); }
 a:visited { color: var(--color-link-visited); }
+
+table.bordered {
+    table-layout: fixed;
+    border: 2px solid var(--color-primary);
+}
+
+code {
+    background-color: var(--color-secondary);
+    font-family: var(--font-mono);
+    padding: 0.01em 0.25em;
+    border-radius: 0.2em;
+}
+
 
 a[href="../"], a.backbutton{
     color: var(--color-link-nav);
@@ -38,11 +64,6 @@ a[href="../"], a.backbutton{
 }
 .navbar-path {
     padding-left: 1em;
-}
-
-table.bordered {
-    table-layout: fixed;
-    border: 2px solid var(--color-primary);
 }
 
 .links-list {
@@ -57,10 +78,3 @@ table.bordered {
 
 .links-list a { display: block; }
 .links-list a::after { content: " →"; }
-
-code {
-    background-color: var(--color-secondary);
-    font-family: "Fira Code", monospace;
-    padding: 0.01em 0.25em;
-    border-radius: 0.2em;
-}
