@@ -23,6 +23,7 @@ body {
     font-family: var(--font-main);
     color: var(--color-primary);
     background-color: var(--color-bg);
+    font-size: 14pt;
 }
 
 textarea, input, button {
@@ -92,7 +93,7 @@ a[href="../"], a.backbutton{
 .section {
     width: 100%;
     background-color: var(--color-bg-sec);
-    border: 2px dashed --color-secondary;
+    box-shadow: 10px 10px 0px black;
 }
 .section-header {
     margin: 0.2em 0;
