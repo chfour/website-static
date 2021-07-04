@@ -7,7 +7,7 @@
     <title>ASCII table</title>
     <link rel="stylesheet" href="/style.css">
     <style>
-        .common{ background-color: var(--highlight, #474747); }
+        .common { background-color: var(--highlight, #474747); }
         td:not(:first-child) {
             font-family: monospace;
         }
@@ -16,8 +16,7 @@
         }
         #gridwrapper {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 1em;
         }
     </style>
