@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,61 +13,78 @@
     <title>my website</title>
     <link rel="stylesheet" href="/style.css">
     <style>
-        .aboutme {
-            margin-left: 2%;
-            width: max-content;
-            padding: 1em;
-            background-color: #896ac1;
-            margin-bottom: 2em;
-            border-radius: 0.4em;
-        }
         .aboutme-main {
             display: grid;
             grid-template-columns: repeat(2, max-content);
             gap: 1em;
         }
+
         .aboutme * { margin: 0; }
-        .aboutme-profile {
-            max-height: 5em;
-            border-radius: 5%;
-        }
-        .aboutme-places {
-            margin-top: 0.5em;
-        }
-        .aboutme-places ul li * {
-            color: black;
-            padding: 0;
-        }
+        .aboutme-places { margin-top: 1em; }
+        .aboutme-places ul li * { color: black; }
         .aboutme-places ul li { list-style-type: none; }
+
+        .first { padding: 0 0 0.5em 0; }
+        .first > *:not(:first-child){
+            margin: 1em;
+        }
     </style>
 </head>
-<body>
-    <p class="navbar"><a href="/8/" class="backbutton">&larr;</a> <span class="navbar-path">/</span></p>
 
-    <div class="aboutme">
-        <div class="aboutme-main">
-            <img class="aboutme-profile" src="/images/profilepic.png" alt="profile picture" title="ok I changed the profile picture">
-            <div class="aboutme-intro">
-                <h1 style="margin-block-start: 0.2em;">hi! I'm ch4.</h1>
-                <p>I make stuff. Sometimes.</p>
+<body style="margin: 0;">
+    <p class="navbar"><a href="/8/" class="backbutton">&larr;</a> <span class="navbar-path">/</span></p>
+    <div id="main">
+    <h1 class="section-header">about</h1>
+    <div class="card section first">
+        <div class="aboutme card" style="background-color: var(--color-accent); margin: 0; width: 100%;">
+            <div class="aboutme-main">
+                <img style="max-height: 5em; border-radius: 5%;" src="/images/profilepic.png" alt="profile picture"
+                    title="ok I changed the profile picture">
+                <div class="aboutme-intro">
+                    <h2 style="margin-block-start: 0.2em;">hi! I'm ch4.</h2>
+                    <p>I make stuff. Sometimes.</p>
+                </div>
+            </div>
+            <div class="aboutme-places">
+                <p>places you can find me:</p>
+                <ul>
+                    <li><a href="https://github.com/chfour">github (chfour)</a></li>
+                    <li><a href="https://www.reddit.com/user/m1ch4ll0">reddit (u/m1ch4ll0)</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCVpfFwVNW1O5aip8AFMojpA">youtube (ch4)</a></li>
+                    <li><a href="https://twitter.com/chfourchfour">twitter (@chfourchfour)</a></li>
+                    <li><span>discord (ch4#1030)</span></ol>
+                </ul>
             </div>
         </div>
-        <div class="aboutme-places">
-            <p>socials I guess</p>
-            <ul>
-                <li><a href="https://github.com/chfour">github (chfour)</a></li>
-                <li><a href="https://www.reddit.com/user/m1ch4ll0">reddit (u/m1ch4ll0)</a></li>
-                <li><a href="https://www.youtube.com/channel/UCVpfFwVNW1O5aip8AFMojpA">youtube (ch4)</a></li>
-                <li><a href="https://twitter.com/chfourchfour">twitter (@chfourchfour)</a></li>
-                <li><span>discord (ch4#1030)</span></ol>
-            </ul>
-        </div>
+
+        <p>My name is Michael, I'm 15 years old.</p>
+        <p>Stuff I'm familiar with, or know:</p>
+        <ul>
+            <li>Linux (daily driving!)</li>
+            <li>Python</li>
+            <li>Javascript (Node.js / browser)</li>
+            <li>HTML & CSS</li>
+            <li>Blender (the 3D modeling / everything program)</li>
+            <li>Some electronics</li>
+        </ul>
+        <p>That's all for now, I guess</p>
     </div>
 
-    <h2>some of my stuff:</h2>
-    <div class="links-list" style="font-size: 1.5em;">
-        <a href="/resources/">useful resources</a>
-        <a href="/garlic-bread-time/">garlic bread time&trade;</a>
+    <h2 class="section-header">projects</h2>
+    <div class="card section">
+        <h3>repos</h3>
+        <div class="links-list">
+            <span><a href="/chfourjs/">chfourjs</a><span style="font-size: 0.5em">: a js framework</span></span>
+            <span><a href="https://github.com/chfour/mcman">mcman</a><span style="font-size: 0.5em">: a minimal Minecraft server manager</span></span>
+            <span><a href="https://github.com/chfour/browser-http-server">browser-http-server</a><span style="font-size: 0.5em">: an http server in the browser</span></span>
+        </div>
+        <h3>other stuff</h3>
+        <div class="links-list" style="font-size: 1.5em;">
+            <a href="/resources/">useful resources</a>
+            <a href="/garlic-bread-time/">garlic bread time&trade;</a>
+        </div>
+    </div>
     </div>
 </body>
+
 </html>
