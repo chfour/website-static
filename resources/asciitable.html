@@ -10,13 +10,13 @@
         .common { background-color: var(--highlight, #474747); }
         td:not(:first-child) {
             font-family: monospace;
+            text-align: center;
         }
-        thead tr th {
-            padding: 0.5em 1em;
-        }
+        td:first-child { padding-left: 0.5em; }
+        thead tr th { padding: 0.5em; }
         #gridwrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1em;
         }
     </style>
