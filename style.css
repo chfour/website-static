@@ -56,6 +56,10 @@ code, pre {
     border-radius: 0.2em;
 }
 
+ul {
+    padding-left: 1.5em;
+    list-style-type: square;
+}
 
 a[href="../"], a.backbutton{
     color: var(--color-link-nav);
@@ -71,13 +75,14 @@ a[href="../"], a.backbutton{
     padding-left: 1em;
 }
 
-.links-list {
-    display: grid;
-    grid-auto-rows: auto;
-    padding-left: 5%;
+ul.links {
+    list-style: none;
+    padding-left: 0.5em;
     align-content: center;
-    font-size: 2em;
+    font-size: 1.2em;
 }
+ul.links li:not(:last-child) { margin-bottom: 0.5em; }
+ul.links li::before { content: "→ "; }
 
 .card {
     width: max-content;
@@ -86,13 +91,13 @@ a[href="../"], a.backbutton{
     border-radius: 0.4em;
     box-sizing: border-box;
 }
-.card > *:first-child {
+.card > :first-child {
     margin-top: 0;
 }
 
 .section {
     width: 100%;
-    background-color: var(--color-bg-sec);
+    background-color: var(--color-bg-sec, #292929);
     box-shadow: 10px 10px 0px black;
 }
 .section-header {
@@ -112,9 +117,4 @@ a[href="../"], a.backbutton{
     #main {
         width: 60%;
     }
-}
-
-ul {
-    padding-left: 1.5em;
-    list-style-type: square;
 }

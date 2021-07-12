@@ -29,9 +29,6 @@
     .first > *:not(:first-child){
       margin: 1em;
     }
-
-    .aboutme-places > ul li:not(:last-child) { margin-bottom: 0.5em; }
-    .aboutme-places > ul li::before { content: "→ "; }
   </style>
 </head>
 
@@ -57,7 +54,7 @@
     
     <div class="aboutme-places">
       <p>places you can find / contact me:</p>
-      <ul style="padding-left: 0.5em; list-style-type: none; font-size: 1.2em;">
+      <ul class="links">
         <li><a href="https://github.com/chfour">github (chfour)</a></li>
         <li><a href="https://www.reddit.com/user/m1ch4ll0">reddit (u/m1ch4ll0)</a></li>
         <li><a href="https://www.youtube.com/channel/UCVpfFwVNW1O5aip8AFMojpA">youtube (ch4)</a></li>
@@ -82,16 +79,16 @@
   <h2 class="section-header">projects</h2>
   <div class="card section">
     <h3>repos</h3>
-    <div class="links-list">
-      <span><a href="/chfourjs/">chfourjs</a><span style="font-size: 0.5em">: a js framework</span></span>
-      <span><a href="https://github.com/chfour/mcman">mcman</a><span style="font-size: 0.5em">: a minimal Minecraft server manager</span></span>
-      <span><a href="https://github.com/chfour/browser-http-server">browser-http-server</a><span style="font-size: 0.5em">: an http server in the browser</span></span>
-    </div>
+    <ul class="links">
+      <li><a href="/chfourjs/">chfourjs</a><span style="font-size: 0.8em">: a js framework</span></li>
+      <li><a href="https://github.com/chfour/mcman">mcman</a><span style="font-size: 0.8em">: a minimal Minecraft server manager</span></li>
+      <li><a href="https://github.com/chfour/browser-http-server">browser-http-server</a><span style="font-size: 0.8em">: an http server in the browser</span></li>
+    </ul>
     <h3>other stuff</h3>
-    <div class="links-list">
-      <a href="/resources/">useful resources</a>
-      <a href="/garlic-bread-time/">garlic bread time&trade;</a>
-    </div>
+    <ul class="links">
+      <li><a href="/resources/">useful resources</a></li>
+      <li><a href="/garlic-bread-time/">garlic bread time&trade;</a></li>
+    </ul>
   </div>
 
   <h2 class="section-header">other things you may be interested in</h2>
@@ -122,5 +119,4 @@
   </div>
   </div>
 </body>
-
 </html>
