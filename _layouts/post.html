@@ -14,8 +14,10 @@
 <body style="margin: 0;">
   <p class="navbar"><a href="/posts.html" class="backbutton">&larr;</a> <span class="navbar-path">{{ page.url }}</span></p>
   <div id="main">
-  <h1>{{ page.title }}</h1>
-  {{ content }}
+    <h1 class="section-header">{{ page.title }}</h1>
+    <div class="card section">
+      {{ content }}
+    </div>
   </div>
 </body>
 </html>
