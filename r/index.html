@@ -8,24 +8,46 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>redirector</h1>
-    <h2>usage</h2>
-    <p>use <code>https://chfour.github.io/r/#id</code> where <code>id</code> is any from the following list of redirects</p>
-    <h2>list</h2>
-    <ul id="list">
-        <li>loading list...</li>
-        <li>tip: if you don't have javascript enabled, enable it now or browse <a href="redirects.json">redirects.json</a> manually</li>
-    </ul>
+    <div id="main">
+        <h1>redirector</h1>
+        <h2>usage</h2>
+        <p>use <code>https://chfour.github.io/r/#id</code> where <code>id</code> is any from the following list of redirects</p>
+        <h2>list</h2>
+        <ul id="list">
+            <li>loading list...</li>
+            <li>tip: if you don't have javascript enabled, enable it now or browse <a href="redirects.json">redirects.json</a> manually</li>
+        </ul>
+    </div>
+    <div id="redirui" style="display: none; margin: auto; width: max-content;">
+        <p style="font-size: 2em;">redirecting in <span id="timeout">5</span>s...</p>
+        <p><a href="#">stop</a></p>
+    </div>
     <script>
+        let redirectsFile;
         function getHash() {return decodeURIComponent(window.location.hash.slice(1))}
-        const redirectsList = document.getElementById("list");
-
-        function tryRedirect(list) {
-            const redirId = getHash();
-            if(!(redirId in list["redirects"])) return
-            console.log("trying to redirect to " + redirId);
+        function setMainVisible(ye) {
+            document.getElementById("main"   ).style.display =  ye ? "block" : "none";
+            document.getElementById("redirui").style.display = !ye ? "block" : "none";
         }
+        
+        function tryRedirect() {
+            const redirId = getHash();
+            console.debug("hashchange", redirId);
+            if(!(redirId in redirectsFile["redirects"])){
+                setMainVisible(true);
+                return
+            }
+            const targetUrl = redirectsFile["redirects"][redirId];
+            console.log("redirecting to " + redirId + " -> " + targetUrl);
+            setMainVisible(false);
+            document.getElementById("timeout").innerText = redirectsFile["delay"];
 
+            setTimeout(() => {
+                console.log("redirecting!");
+            }, redirectsFile["delay"] * 1000);
+        }
+        
+        const redirectsList = document.getElementById("list");
         fetch("./redirects.json").then(data => data.json())
             .then(list => {
                 while(redirectsList.firstChild) redirectsList.removeChild(redirectsList.lastChild);
@@ -50,7 +72,11 @@
                 
                 return list
             })
-            .then(list => tryRedirect(list))
+            .then(list => {
+                redirectsFile = list;
+                tryRedirect();
+                window.addEventListener("hashchange", tryRedirect);
+            })
     </script>
 </body>
 </html>
