@@ -52,7 +52,7 @@
             }
             timeoutId = setTimeout(() => {
                 console.log("redirecting!");
-                window.location.href = targetUrl;
+                window.location.replace(targetUrl);
             }, redirectsFile["delay"] * 1000);
         }
         
