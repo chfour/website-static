@@ -23,7 +23,7 @@
         <p><a href="#">stop</a></p>
     </div>
     <script>
-        let redirectsFile;
+        let redirectsFile, timeoutId;
         function getHash() {return decodeURIComponent(window.location.hash.slice(1))}
         function setMainVisible(ye) {
             document.getElementById("main"   ).style.display =  ye ? "block" : "none";
@@ -34,6 +34,10 @@
             const redirId = getHash();
             console.debug("hashchange", redirId);
             if(!(redirId in redirectsFile["redirects"])){
+                if(timeoutId) {
+                    clearTimeout(timeoutId);
+                    timeoutId = null;
+                }
                 setMainVisible(true);
                 return
             }
@@ -42,8 +46,13 @@
             setMainVisible(false);
             document.getElementById("timeout").innerText = redirectsFile["delay"];
 
-            setTimeout(() => {
+            if(timeoutId) {
+                clearTimeout(timeoutId);
+                timeoutId = null;
+            }
+            timeoutId = setTimeout(() => {
                 console.log("redirecting!");
+                window.location.href = targetUrl;
             }, redirectsFile["delay"] * 1000);
         }
         
