@@ -24,8 +24,9 @@
     <h1>8</h1>
     <script>
         function update() {
-            const custom = decodeURIComponent(window.location.hash.slice(1));
-            if(custom) document.querySelector("h1").innerText = custom;
+            const custom = decodeURIComponent(window.location.hash.slice(1)) || "8";
+            document.querySelector("h1").innerText = custom;
+            document.title = custom;
         }
         update();
         window.addEventListener("hashchange", update);
