@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div id="main">
+    <div id="infoui">
         <h1>redirector</h1>
         <h2>usage</h2>
         <p>use <code>https://chfour.github.io/r/#id</code> where <code>id</code> is any from the following list of redirects</p>
@@ -26,7 +26,7 @@
         let redirectsFile, timeoutId;
         function getHash() {return decodeURIComponent(window.location.hash.slice(1))}
         function setMainVisible(ye) {
-            document.getElementById("main"   ).style.display =  ye ? "block" : "none";
+            document.getElementById("infoui" ).style.display =  ye ? "block" : "none";
             document.getElementById("redirui").style.display = !ye ? "block" : "none";
         }
         

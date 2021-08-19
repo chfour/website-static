@@ -1,6 +1,8 @@
 {
     "redirects": {
-        "test": "/"
+        "test": "/",
+        "epic": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "garlic": "/garlic-bread-time/"
     },
     "delay": 2
 }
