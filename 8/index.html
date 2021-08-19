@@ -22,5 +22,13 @@
 </head>
 <body>
     <h1>8</h1>
+    <script>
+        function update() {
+            const custom = decodeURIComponent(window.location.hash.slice(1));
+            if(custom) document.querySelector("h1").innerText = custom;
+        }
+        update();
+        window.addEventListener("hashchange", update);
+    </script>
 </body>
 </html>
