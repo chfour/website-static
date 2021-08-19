@@ -12,8 +12,8 @@
     --color-link-visited: rgb(134, 129, 207);
     --color-link-nav: rgb(218, 215, 255);
 
-    --border--normal: 1px solid var(--color-secondary);
-    --border--focus: 1px solid var(--color-primary);
+    --border-normal: 1px solid var(--color-secondary);
+    --border-focus: 1px solid var(--color-primary);
 
     --input-bg-normal: #2d2d2d;
     --input-bg-pressed: #757575;
