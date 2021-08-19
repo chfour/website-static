@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redirector</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>redirector</h1>
+    <h2>usage</h2>
+    <p>use <code>https://chfour.github.io/r/#id</code> where <code>id</code> is any from the following list of redirects</p>
+    <h2>list</h2>
+    <ul id="list">
+        <li>loading list...</li>
+        <li>tip: if you don't have javascript enabled, enable it now or browse <a href="redirects.json">redirects.json</a> manually</li>
+    </ul>
+    <script>
+        function getHash() {return decodeURIComponent(window.location.hash.slice(1))}
+        const redirectsList = document.getElementById("list");
+
+        function tryRedirect(list) {
+            const redirId = getHash();
+            if(!(redirId in list["redirects"])) return
+            console.log("trying to redirect to " + redirId);
+        }
+
+        fetch("./redirects.json").then(data => data.json())
+            .then(list => {
+                while(redirectsList.firstChild) redirectsList.removeChild(redirectsList.lastChild);
+                console.log(list);
+                Object.entries(list["redirects"]).forEach(([k, v]) => {
+                    const newLink = document.createElement("a");
+                    newLink.innerText = k;
+                    newLink.setAttribute("href", "#" + k);
+                    newLink.style.fontFamily = "var(--font-monospace, monospace)"
+                    
+                    const targetUrl = document.createElement("span");
+                    targetUrl.innerText = v;
+                    targetUrl.style.fontFamily = "var(--font-monospace, monospace)";
+
+                    const newItem = document.createElement("li");
+                    newItem.appendChild(newLink);
+                    newItem.appendChild(document.createTextNode(" \u2192 "));
+                    newItem.appendChild(targetUrl);
+
+                    redirectsList.appendChild(newItem);
+                })
+                
+                return list
+            })
+            .then(list => tryRedirect(list))
+    </script>
+</body>
+</html>
