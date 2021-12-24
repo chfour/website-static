@@ -118,3 +118,10 @@ ul.links li::before { content: "→ "; }
         width: 60%;
     }
 }
+
+#footer {
+    width: 100%;
+    border-top: 1px dashed var(--color-secondary);
+    box-sizing: border-box;
+    padding-left: 1em;
+}
