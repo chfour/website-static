@@ -2,154 +2,154 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:title" content="chfour's cool website">
-  <meta property="og:description" content="notmethane.png">
-  <meta property="og:site_name" content="chfour.github.io/">
-  <meta property="og:image" content="/images/profilepic.png">
-  <meta name="theme-color" content="#896ac1">
-  <meta name="description" content="I'm ch4 aka chfour, this is my own little website.">
+    <meta property="og:title" content="chfour's cool website">
+    <meta property="og:description" content="notmethane.png">
+    <meta property="og:site_name" content="chfour.github.io/">
+    <meta property="og:image" content="/images/profilepic.png">
+    <meta name="theme-color" content="#896ac1">
+    <meta name="description" content="I'm ch4 aka chfour, this is my own little website.">
 
-  <title>my website</title>
-  <link rel="stylesheet" href="/style.css">
-  <style>
-    .aboutme-main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
-      gap: 1em;
-      color: black;
-    }
+    <title>my website</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .aboutme-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+            gap: 1em;
+            color: black;
+        }
 
-    .aboutme * { margin: 0; }
+        .aboutme * { margin: 0; }
 
-    .first { padding: 0 0 0.5em 0; }
-    .first > *:not(:first-child){
-      margin: 1em;
-    }
-    .fontsmall {
-      font-size: 0.8em;
-    }
-    
-    :root::before {
-      content: "";
-      position: fixed;
-      z-index: -1;
-      left: -100%; top: -100%;
-      width: 250%;
-      height: 250%;
+        .first { padding: 0 0 0.5em 0; }
+        .first > *:not(:first-child){
+            margin: 1em;
+        }
+        .fontsmall {
+            font-size: 0.8em;
+        }
+        
+        :root::before {
+            content: "";
+            position: fixed;
+            z-index: -1;
+            left: -100%; top: -100%;
+            width: 250%;
+            height: 250%;
 
-      background-image: repeating-conic-gradient(var(--color-secondary) 0% 25%, transparent 0% 50%);
-      background-size: 5em 5em;
-      background-position: 2vw 1.2vw;
-      background-repeat: repeat;
-      transform: rotate(2deg);
-    }
-    body > :not(#main) {
-      background-color: var(--color-bg);
-    }
-    .navbar, #footer > p {
-      padding: 0.5em 1em;
-      margin: 0;
-    }
-  </style>
+            background-image: repeating-conic-gradient(var(--color-secondary) 0% 25%, transparent 0% 50%);
+            background-size: 5em 5em;
+            background-position: 2vw 1.2vw;
+            background-repeat: repeat;
+            transform: rotate(2deg);
+        }
+        body > :not(#main) {
+            background-color: var(--color-bg);
+        }
+        .navbar, #footer > p {
+            padding: 0.5em 1em;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body style="margin: 0;">
-  <p class="navbar">
-    <a href="/8/" class="backbutton">&larr;</a>
-    <span class="navbar-path">/</span>
-    <a href="/posts.html" style="position: absolute; right: 1em; font-size: 1.em;">blog</a>
-  </p>
-  <div id="main">
-  <h1 class="section-header">about</h1>
-  <div class="card section first">
-    <div class="aboutme card" style="background-color: var(--color-accent); margin: 0; width: 100%;">
-      <div class="aboutme-main">
-        <img width="80" height="80" style="border-radius: 5%;" src="/images/profilepic.png"
-        alt="profile picture" title="ok I changed the profile picture">
-        <div>
-          <h2 style="margin-block-start: 0.2em;">hi! I'm ch4.</h2>
-          <p>I make stuff. Sometimes.</p>
+    <p class="navbar">
+        <a href="/8/" class="backbutton">&larr;</a>
+        <span class="navbar-path">/</span>
+        <a href="/posts.html" style="position: absolute; right: 1em; font-size: 1.em;">blog</a>
+    </p>
+    <div id="main">
+    <h1 class="section-header">about</h1>
+    <div class="card section first">
+        <div class="aboutme card" style="background-color: var(--color-accent); margin: 0; width: 100%;">
+            <div class="aboutme-main">
+                <img width="80" height="80" style="border-radius: 5%;" src="/images/profilepic.png"
+                alt="profile picture" title="ok I changed the profile picture">
+                <div>
+                    <h2 style="margin-block-start: 0.2em;">hi! I'm ch4.</h2>
+                    <p>I make stuff. Sometimes.</p>
+                </div>
+            </div>
         </div>
-      </div>
+        
+        <div class="aboutme-places">
+            <ul class="links">
+                <li><a href="https://github.com/chfour">github (chfour)</a></li>
+                <li><a href="https://www.reddit.com/user/m1ch4ll0">reddit (u/m1ch4ll0)</a></li>
+                <li><a href="https://www.youtube.com/channel/UCVpfFwVNW1O5aip8AFMojpA">youtube (ch4)</a></li>
+                <li><a href="https://twitter.com/chfourchfour">shitter (@chfourchfour)</a></li>
+                <li><a rel="me" href="https://wetdry.world/@chfour">mastodon (@chfour@wetdry.world)</a></li>
+                <li>discord (ch4#1030)</li> <!-- dimscorm -->
+            </ul>
+        </div>
+
+        <p>Amateur datahoarder, Linux user, sort-of radio enthusiast and a furry. What a combo. My name is Michael, I'm 16 years old.</p>
+        <p>he/him, and <a href="https://en.wiktionary.org/wiki/they#Pronoun">they/them is fine too</a>. I don't really care.</p>
+        <p>Stuff I'm familiar with, or know:</p>
+        <ul>
+            <li>Linux (daily driving!)</li>
+            <li>Python</li>
+            <li>Javascript (Node.js / browser)</li>
+            <li>HTML & CSS</li>
+            <li>Blender (the 3D modeling / everything program)</li>
+            <li>Some electronics</li>
+        </ul>
+        <p>That's all for now, I guess</p>
     </div>
-    
-    <div class="aboutme-places">
-      <ul class="links">
-        <li><a href="https://github.com/chfour">github (chfour)</a></li>
-        <li><a href="https://www.reddit.com/user/m1ch4ll0">reddit (u/m1ch4ll0)</a></li>
-        <li><a href="https://www.youtube.com/channel/UCVpfFwVNW1O5aip8AFMojpA">youtube (ch4)</a></li>
-        <li><a href="https://twitter.com/chfourchfour">shitter (@chfourchfour)</a></li>
-        <li><a rel="me" href="https://wetdry.world/@chfour">mastodon (@chfour@wetdry.world)</a></li>
-        <li>discord (ch4#1030)</li> <!-- dimscorm -->
-      </ul>
+
+    <h2 class="section-header">projects</h2>
+    <div class="card section">
+        <h3>repos</h3>
+        <ul class="links">
+            <li><a href="https://github.com/chfour/ytlib">ytlib</a><span class="fontsmall">: create a library of youtube videos, <a href="https://reddit.com/r/datahoarder">r/datahoarder</a> style</span></li>
+            <li><a href="https://github.com/chfour/footprint">footprint</a><span class="fontsmall">: browser fingerprinting library</span></li>
+            <li><a href="https://github.com/chfour/mcman">mcman</a><span class="fontsmall">: a minimal Minecraft server manager</span></li>
+            <li><a href="https://github.com/chfour/browser-http-server">browser-http-server</a><span class="fontsmall">: an http server in the browser</span></li>
+            <li><a href="https://github.com/chfour/linklister">linklister</a><span class="fontsmall">: autogenerated index page crawler</span></li>
+        </ul>
+
+        <h3>other stuff</h3>
+        <ul class="links">
+            <li><a href="/resources/asciitable.html">an ascii table that doesn't suck</a></li>
+            <li><a href="https://chfour.github.io/garlic-bread-time/">garlic bread time&trade;</a></li>
+        </ul>
     </div>
 
-    <p>Amateur datahoarder, Linux user, sort-of radio enthusiast and a furry. What a combo. My name is Michael, I'm 16 years old.</p>
-    <p>he/him, and <a href="https://en.wiktionary.org/wiki/they#Pronoun">they/them is fine too</a>. I don't really care.</p>
-    <p>Stuff I'm familiar with, or know:</p>
-    <ul>
-      <li>Linux (daily driving!)</li>
-      <li>Python</li>
-      <li>Javascript (Node.js / browser)</li>
-      <li>HTML & CSS</li>
-      <li>Blender (the 3D modeling / everything program)</li>
-      <li>Some electronics</li>
-    </ul>
-    <p>That's all for now, I guess</p>
-  </div>
+    <h2 class="section-header">other things you may be interested in</h2>
+    <div class="card section">
+        <h3>my PC</h3>
+        <p>is a Lenovo ThinkPad E14 Gen 2</p>
+        <ul>
+            <li>CPU: 11th gen Intel i5-1135G7 @ 4.20GHz max</li>
+            <li>GPU: integrated Intel Iris Xe (surprisingly good for an iGPU though)</li>
+            <li>RAM/Disk: 16GB / 512GB Samsung PM991 NVMe SSD</li>
+            <li>Display: 1080p60 + external 1080p60</li>
+        </ul>
 
-  <h2 class="section-header">projects</h2>
-  <div class="card section">
-    <h3>repos</h3>
-    <ul class="links">
-      <li><a href="https://github.com/chfour/ytlib">ytlib</a><span class="fontsmall">: create a library of youtube videos, <a href="https://reddit.com/r/datahoarder">r/datahoarder</a> style</span></li>
-      <li><a href="https://github.com/chfour/footprint">footprint</a><span class="fontsmall">: browser fingerprinting library</span></li>
-      <li><a href="https://github.com/chfour/mcman">mcman</a><span class="fontsmall">: a minimal Minecraft server manager</span></li>
-      <li><a href="https://github.com/chfour/browser-http-server">browser-http-server</a><span class="fontsmall">: an http server in the browser</span></li>
-      <li><a href="https://github.com/chfour/linklister">linklister</a><span class="fontsmall">: autogenerated index page crawler</span></li>
-    </ul>
-
-    <h3>other stuff</h3>
-    <ul class="links">
-      <li><a href="/resources/asciitable.html">an ascii table that doesn't suck</a></li>
-      <li><a href="https://chfour.github.io/garlic-bread-time/">garlic bread time&trade;</a></li>
-    </ul>
-  </div>
-
-  <h2 class="section-header">other things you may be interested in</h2>
-  <div class="card section">
-    <h3>my PC</h3>
-    <p>is a Lenovo ThinkPad E14 Gen 2</p>
-    <ul>
-      <li>CPU: 11th gen Intel i5-1135G7 @ 4.20GHz max</li>
-      <li>GPU: integrated Intel Iris Xe (surprisingly good for an iGPU though)</li>
-      <li>RAM/Disk: 16GB / 512GB Samsung PM991 NVMe SSD</li>
-      <li>Display: 1080p60 + external 1080p60</li>
-    </ul>
-
-    <h3>software and themes</h3>
-    <a href="images/desktop-screenshot.png"><img src="images/desktop-screenshot-small.webp" alt="desktop screenshot, click to view full res" title="click to show full res version" style="max-width: 50%; max-height: 50vh;"></a>
-    <ul>
-      <li>Manjaro Linux w/ KDE Plasma</li>
-      <li>Application / Kvantum theme: <a href="https://www.pling.com/p/1457367/">Lavender</a></li>
-      <li>Icons: builtin Breeze Dark</li>
-      <li>GTK theme: <a href="https://store.kde.org/p/1279224">Canvas-dark</a></li>
-      <li>Titlebars: builtin Plastik theme, titlebar font is the GNU Unifont</li>
-      <li>System / menu font: Fira Sans</li>
-      <li>Plasma style: <a href="https://store.kde.org/p/1312311">Mirage</a></li>
-      <li>Color scheme: <a href="https://store.kde.org/p/1479064">Genome Dark Charoite</a></li>
-      <li>Terminal emulator of choice: Konsole, font: Terminus size 12</li>
-      <li>Preferred text editor: VSCode (theme: Mayukai Alucard), <a href="https://micro-editor.github.io/">micro</a> for smaller things</li>
-      <li>Wallpapers: <a href="https://store.kde.org/p/1428521">Forest Sunset (on screenshot)</a> &amp; <a href="https://store.kde.org/p/1659733">ArcMidnight-dark (on secondary screen)</a></li>
-    </ul>
-  </div>
+        <h3>software and themes</h3>
+        <a href="images/desktop-screenshot.png"><img src="images/desktop-screenshot-small.webp" alt="desktop screenshot, click to view full res" title="click to show full res version" style="max-width: 50%; max-height: 50vh;"></a>
+        <ul>
+            <li>Manjaro Linux w/ KDE Plasma</li>
+            <li>Application / Kvantum theme: <a href="https://www.pling.com/p/1457367/">Lavender</a></li>
+            <li>Icons: builtin Breeze Dark</li>
+            <li>GTK theme: <a href="https://store.kde.org/p/1279224">Canvas-dark</a></li>
+            <li>Titlebars: builtin Plastik theme, titlebar font is the GNU Unifont</li>
+            <li>System / menu font: Fira Sans</li>
+            <li>Plasma style: <a href="https://store.kde.org/p/1312311">Mirage</a></li>
+            <li>Color scheme: <a href="https://store.kde.org/p/1479064">Genome Dark Charoite</a></li>
+            <li>Terminal emulator of choice: Konsole, font: Terminus size 12</li>
+            <li>Preferred text editor: VSCode (theme: Mayukai Alucard), <a href="https://micro-editor.github.io/">micro</a> for smaller things</li>
+            <li>Wallpapers: <a href="https://store.kde.org/p/1428521">Forest Sunset (on screenshot)</a> &amp; <a href="https://store.kde.org/p/1659733">ArcMidnight-dark (on secondary screen)</a></li>
+        </ul>
+    </div>
 </div>
 <div id="footer">
-  <p>You may view this page's history <a href="https://github.com/chfour/chfour.github.io/commits/main/index.html">here</a>.</p>
+    <p>You may view this page's history <a href="https://github.com/chfour/chfour.github.io/commits/main/index.html">here</a>.</p>
 </div>
 </body>
 </html>
