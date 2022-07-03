@@ -29,12 +29,9 @@
         .aboutme * { margin: 0; }
 
         .first { padding: 0 0 0.5em 0; }
-        .first > *:not(:first-child){
-            margin: 1em;
-        }
-        .fontsmall {
-            font-size: 0.8em;
-        }
+        .first > * { margin: 1em; }
+
+        .fontsmall { font-size: 0.8em; }
         
         :root::before {
             content: "";
@@ -53,6 +50,16 @@
         body > :not(article) {
             background-color: var(--color-bg);
         }
+        
+        .buttons {
+            margin: 0;
+
+            /* this is so whitespace doesn't cause spacing between the buttons */
+            font-size: 0;
+        }
+        .buttons img {
+            height: 31px;
+        }
     </style>
 </head>
 
@@ -66,13 +73,21 @@
     <section>
         <h1>about</h1>
         <div class="card first">
-            <div class="aboutme card">
+            <div class="aboutme card" style="margin: 0;">
                 <img width="80" height="80" style="border-radius: 5%;" src="/images/profilepic.png"
                 alt="profile picture" title="ok I changed the profile picture">
                 <div>
                     <h2 style="margin-block-start: 0.2em;">hi! I'm ch4.</h2>
                     <p>I make stuff. Sometimes.</p>
                 </div>
+            </div>
+            <div class="buttons">
+                <a href="https://en.wikipedia.org/wiki/Asexuality"><img src="images/buttons/aceflag.png" alt="88x31 button: asexual pride flag"></a>
+                <a href="https://xenia-linux-site.glitch.me/"><img src="images/buttons/poweredbylinux_xenia.png" height="31" alt="88x31-style button: Xenia the alternative Linux mascot, with the text 'Powered by LINUX' in serif"></a>
+                <a href="https://archive.org/"><img src="images/buttons/ia_preserve.png" alt="88x31 button: Internet Archive logo, with the text 'Preserve' and the 'Netscape Now' red cursive 'Now!'"></a>
+                <a href="https://www.youtube.com/watch?v=up863eQKGUI"><img src="images/buttons/copy_floppy.png" alt="88x31 button: a blue 3.5 inch floppy disk, with the text 'Copy that floppy!'"></a>
+                <a href="https://opnsense.org/opnsense-com/"><img src="images/buttons/fucknetgate.png" alt="88x31 button: pfSense logo crossed over in red, and the text 'FUCK NETGATE' with the first word in red"></a>
+                <a href="https://reddit.com/r/opendirectories"><img src="images/buttons/opendirectories.png" alt="88x31 button: a pixel art drawing of an http server autoindex page, and the text 'Open Directories'"></a>
             </div>
             
             <p>
