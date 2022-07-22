@@ -14,13 +14,18 @@
   <title>{{ page.title }}</title>
 </head>
 <body style="margin: 0;">
-  <p class="navbar"><a href="/posts.html" class="backbutton">&larr;</a> <span class="navbar-path">{{ page.url }}</span></p>
-  <div id="main">
-    <h1 class="section-header">{{ page.title }}</h1>
+  <nav><a href="/posts.html" class="backbutton">&larr;</a> <span class="navbar-path">{{ page.url }}</span></nav>
+
+  <article>
+  <section>
+    <h1>{{ page.title }}</h1>
     <div class="card section headertab">{{ page.description | newline_to_br }}</div>
-    <div class="card section">
+  </section>
+  <section>
+    <div></div>
+    <div class="card">
 {{ content }}
     </div>
-  </div>
+  </article>
 </body>
 </html>
