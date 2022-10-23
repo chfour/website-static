@@ -33,20 +33,6 @@
 
         .fontsmall { font-size: 0.8em; }
         
-        :root::before {
-            content: "";
-            position: fixed;
-            z-index: -1;
-            left: -100%; top: -100%;
-            width: 250%;
-            height: 250%;
-
-            background-image: repeating-conic-gradient(var(--color-secondary) 0% 25%, transparent 0% 50%);
-            background-size: 5em 5em;
-            background-position: 2vw 1.2vw;
-            background-repeat: repeat;
-            transform: rotate(2deg);
-        }
         body > :not(article) {
             background-color: var(--color-bg);
         }
